@@ -87,6 +87,7 @@ void shiftLeft(int arr[], const unsigned int n, int Quantity)
 	}
 }
 
+
 void Sort(int arr[], const unsigned int n)
 {
 	int t = 0;
