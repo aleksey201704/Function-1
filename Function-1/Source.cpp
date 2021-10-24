@@ -4,11 +4,14 @@
 using  namespace std;
 // ЗАполняет случайными числами
 
+const unsigned int ROWS = 4;
+const unsigned int COLS = 4;
+
+
+
 void FillRand(int arr[], const unsigned int n, int minRand, int maxRand);
 void FillRand(double arr[], const unsigned int n, int minRand, int maxRand);
 
-const unsigned int ROWS = 4;
-const unsigned int COLS = 4;
 
 void Print(int arr[], const unsigned int n);
 void Print(double arr[], const unsigned int n);
