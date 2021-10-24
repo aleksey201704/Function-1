@@ -34,7 +34,8 @@ void Sort(int arr[], const unsigned int n);
 void Sort(double arr[], const unsigned int n);
 void shiftLeft(int arr[], const unsigned int n, int Quantity);
 void shiftLeft(double arr[], const unsigned int n, int Quantity);
-
+void shiftRight(int arr[], const unsigned int n, int Quantity);
+void shiftRight(double arr[], const unsigned int n, int Quantity);
 
 
 void  main()
@@ -42,21 +43,13 @@ void  main()
 	setlocale(LC_ALL, "Russian");
 	const unsigned int n = 5;
 	int arr[n];
+	
+
 	int Quantity = 0;
 	int minRand;
 	int maxRand;
-
-	cout << "¬ведите минимамальное = "; cin >> minRand;
-	cout << "¬ведите максимальное = "; cin >> maxRand;
-
-	FillRand(arr, n, minRand, maxRand);
-	Print(arr, n);
-
-	cout << endl;
-
+	
 	double brr[n];
-	FillRand(brr, n, minRand, maxRand);
-	Print(brr, n);
 
 	int i_arr_2[ROWS][COLS] =
 	{
@@ -66,16 +59,30 @@ void  main()
 		{1,2,3,5}
 	};
 
+	cout << "¬ведите минимамальное = "; cin >> minRand;
+	cout << "¬ведите максимальное = "; cin >> maxRand;
+
+	FillRand(arr, n, minRand, maxRand);
+	Print(arr, n);
+
+	cout << endl;
+	
+	
+	FillRand(brr, n, minRand, maxRand);
+	
+	Print(brr, n);
 	cout << endl;
 	Print(i_arr_2, ROWS, COLS);
 
-	/*ReversPrint(arr, n);
+	Print(arr, n);
+	ReversPrint(arr, n);
 	cout << endl << " —умма = " << Sum(arr, n);
 	Avg(arr, n);
 	minValueIn(arr, n);
 	maxValueIn(arr, n);
 	Sort(arr, n);
-	shiftLeft(arr, n, Quantity);*/
+	shiftLeft(arr, n, Quantity);
+	shiftRight(arr, n, Quantity);
 
 
 }
@@ -93,42 +100,98 @@ void Print(int arr[ROWS][COLS], const unsigned int ROWS, const unsigned int COLS
 	}
 }
 
-void shiftLeft(int arr[], const unsigned int n, int Quantity)
+void shiftRight(int arr[], const unsigned int n, int Quantity)
 {
 	cout << endl;
-	cout << "¬ведите на колчество сдвига влево = "; cin >> Quantity;
-	//int arrLeft[5];
-	int arrSort[5];
-	int k = Quantity - 1;
-	for (int i = 0; i < Quantity - 1; i++)
-	{
-		arrSort[i] = arr[k];
-		k;
-	}
+	cout << "¬ведите на колчество сдвига ¬право = "; cin >> Quantity;
 
-	for (int i = 0; i < n; i++)
+	for (int i = n - Quantity; i < n; i++)
 	{
 		cout << arr[i] << "\t";
 	}
+
+	for (int i = 0; i < n - Quantity; i++)
+	{
+		cout << arr[i] << "\t";
+	}
+
+
+}
+void shiftRight(double arr[], const unsigned int n, int Quantity)
+{
+	cout << endl;
+	cout << "¬ведите на колчество сдвига ¬право = "; cin >> Quantity;
+
+	for (int i = n - Quantity; i < n; i++)
+	{
+		cout << arr[i] << "\t";
+	}
+
+	for (int i = 0; i < n - Quantity; i++)
+	{
+		cout << arr[i] << "\t";
+	}
+
+
+}
+
+void shiftLeft(int arr[], const unsigned int n, int Quantity)
+{
+	unsigned int arrL[] = {0,0,0,0,0};
+	unsigned int i1 = 0;
+			
+	cout << endl;
+	cout << "¬ведите на колчество сдвига влево = "; cin >> Quantity;
+	
+	for (unsigned int i = Quantity; i < n; i++)
+	{
+		cout << arr[i] << "\t";
+		arrL[i1] = arr[i];
+		i1++;
+	}
+	
+	for (unsigned int i = 0; i < Quantity; i++)
+	{
+		cout << arr[i] << "\t";
+		arrL[i1] = arr[i];
+		i1++;
+	}
+	
+	for (unsigned int i = 0; i < n; i++)
+	{
+		arr[i] = arrL[i];
+	}
+	
 }
 void shiftLeft(double arr[], const unsigned int n, int Quantity)
 {
+	unsigned int arrL[] = { 0,0,0,0,0 };
+	unsigned int i1 = 0;
+
 	cout << endl;
 	cout << "¬ведите на колчество сдвига влево = "; cin >> Quantity;
-	//int arrLeft[5];
-	int arrSort[5];
-	int k = Quantity - 1;
-	for (int i = 0; i < Quantity - 1; i++)
-	{
-		arrSort[i] = arr[k];
-		k;
-	}
 
-	for (int i = 0; i < n; i++)
+	for (unsigned int i = Quantity; i < n; i++)
 	{
 		cout << arr[i] << "\t";
+		arrL[i1] = arr[i];
+		i1++;
 	}
+
+	for (unsigned int i = 0; i < Quantity; i++)
+	{
+		cout << arr[i] << "\t";
+		arrL[i1] = arr[i];
+		i1++;
+	}
+
+	for (unsigned int i = 0; i < n; i++)
+	{
+		arr[i] = arrL[i];
+	}
+
 }
+
 
 void Sort(int arr[], const unsigned int n)
 {
