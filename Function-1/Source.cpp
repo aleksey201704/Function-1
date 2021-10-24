@@ -1,13 +1,13 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <windows.h>
 
 using  namespace std;
-// ЗАполняет случайными числами
+// Р—РђРїРѕР»РЅСЏРµС‚ СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 
 const unsigned int ROWS = 4;
 const unsigned int COLS = 4;
 
-// Двухмерный массив
+// Р”РІСѓС…РјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ
 void Print(int arr[ROWS][COLS], const unsigned int ROWS, const unsigned int COLS);
 
 void Print(int arr[], const unsigned int n);
@@ -59,8 +59,8 @@ void  main()
 		{1,2,3,5}
 	};
 
-	cout << "Введите минимамальное = "; cin >> minRand;
-	cout << "Введите максимальное = "; cin >> maxRand;
+	cout << "Р’РІРµРґРёС‚Рµ РјРёРЅРёРјР°РјР°Р»СЊРЅРѕРµ = "; cin >> minRand;
+	cout << "Р’РІРµРґРёС‚Рµ РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ = "; cin >> maxRand;
 
 	FillRand(arr, n, minRand, maxRand);
 	Print(arr, n);
@@ -76,7 +76,7 @@ void  main()
 
 	Print(arr, n);
 	ReversPrint(arr, n);
-	cout << endl << " Сумма = " << Sum(arr, n);
+	cout << endl << " РЎСѓРјРјР° = " << Sum(arr, n);
 	Avg(arr, n);
 	minValueIn(arr, n);
 	maxValueIn(arr, n);
@@ -103,7 +103,7 @@ void Print(int arr[ROWS][COLS], const unsigned int ROWS, const unsigned int COLS
 void shiftRight(int arr[], const unsigned int n, int Quantity)
 {
 	cout << endl;
-	cout << "Введите на колчество сдвига Вправо = "; cin >> Quantity;
+	cout << "Р’РІРµРґРёС‚Рµ РЅР° РєРѕР»С‡РµСЃС‚РІРѕ СЃРґРІРёРіР° Р’РїСЂР°РІРѕ = "; cin >> Quantity;
 
 	for (int i = n - Quantity; i < n; i++)
 	{
@@ -120,7 +120,7 @@ void shiftRight(int arr[], const unsigned int n, int Quantity)
 void shiftRight(double arr[], const unsigned int n, int Quantity)
 {
 	cout << endl;
-	cout << "Введите на колчество сдвига Вправо = "; cin >> Quantity;
+	cout << "Р’РІРµРґРёС‚Рµ РЅР° РєРѕР»С‡РµСЃС‚РІРѕ СЃРґРІРёРіР° Р’РїСЂР°РІРѕ = "; cin >> Quantity;
 
 	for (int i = n - Quantity; i < n; i++)
 	{
@@ -141,7 +141,7 @@ void shiftLeft(int arr[], const unsigned int n, int Quantity)
 	unsigned int i1 = 0;
 			
 	cout << endl;
-	cout << "Введите на колчество сдвига влево = "; cin >> Quantity;
+	cout << "Р’РІРµРґРёС‚Рµ РЅР° РєРѕР»С‡РµСЃС‚РІРѕ СЃРґРІРёРіР° РІР»РµРІРѕ = "; cin >> Quantity;
 	
 	for (unsigned int i = Quantity; i < n; i++)
 	{
@@ -169,7 +169,7 @@ void shiftLeft(double arr[], const unsigned int n, int Quantity)
 	unsigned int i1 = 0;
 
 	cout << endl;
-	cout << "Введите на колчество сдвига влево = "; cin >> Quantity;
+	cout << "Р’РІРµРґРёС‚Рµ РЅР° РєРѕР»С‡РµСЃС‚РІРѕ СЃРґРІРёРіР° РІР»РµРІРѕ = "; cin >> Quantity;
 
 	for (unsigned int i = Quantity; i < n; i++)
 	{
@@ -247,7 +247,7 @@ void maxValueIn(int arr[], const unsigned int n)
 		}
 	}
 
-	cout << endl << "Максимальное значение = " << max;
+	cout << endl << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ = " << max;
 }
 void maxValueIn(double arr[], const unsigned int n)
 {
@@ -260,7 +260,7 @@ void maxValueIn(double arr[], const unsigned int n)
 		}
 	}
 
-	cout << endl << "Максимальное значение = " << max;
+	cout << endl << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ = " << max;
 }
 
 void minValueIn(int arr[], const unsigned int n)
@@ -274,7 +274,7 @@ void minValueIn(int arr[], const unsigned int n)
 		}
 	}
 
-	cout << endl << "Минимальное значение = " << min;
+	cout << endl << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ = " << min;
 }
 void minValueIn(double arr[], const unsigned int n)
 {
@@ -287,7 +287,7 @@ void minValueIn(double arr[], const unsigned int n)
 		}
 	}
 
-	cout << endl << "Минимальное значение = " << min;
+	cout << endl << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ = " << min;
 }
 
 void FillRand(int arr[], const unsigned int n, int minRand, int maxRand)
@@ -367,10 +367,10 @@ int Sum(double arr[], const unsigned int  n)
 
 void Avg(int arr[], const unsigned int n)
 {
-	cout << endl << "Среднне число = " << (double)Sum(arr, n) / n;
+	cout << endl << "РЎСЂРµРґРЅРЅРµ С‡РёСЃР»Рѕ = " << (double)Sum(arr, n) / n;
 }
 void Avg(double arr[], const unsigned int n)
 {
-	cout << endl << "Среднне число = " << (double)Sum(arr, n) / n;
+	cout << endl << "РЎСЂРµРґРЅРЅРµ С‡РёСЃР»Рѕ = " << (double)Sum(arr, n) / n;
 }
 
