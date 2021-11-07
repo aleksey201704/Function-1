@@ -8,10 +8,11 @@ const unsigned int ROWS = 4;
 const unsigned int COLS = 4;
 
 // Двухмерный массив
-void Print(int arr[ROWS][COLS], const unsigned int ROWS, const unsigned int COLS);
+template <typename T> // Шаблоного типа
+void Print(T arr[ROWS][COLS], const unsigned int ROWS, const unsigned int COLS);
 
-void Print(int arr[], const unsigned int n);
-void Print(double arr[], const unsigned int n);
+template <typename T> // Шаблоного типа
+void Print(T arr[], const unsigned int n);
 
 void FillRand(int arr[], const unsigned int n, int minRand, int maxRand);
 void FillRand(double arr[], const unsigned int n, int minRand, int maxRand);
@@ -27,13 +28,16 @@ void Avg(double arr[], const unsigned int n);
 
 void minValueIn(int arr[], const unsigned int n);
 void minValueIn(double arr[], const unsigned int n);
+
 void maxValueIn(int arr[], const unsigned int n);
 void maxValueIn(double arr[], const unsigned int n);
 
 void Sort(int arr[], const unsigned int n);
 void Sort(double arr[], const unsigned int n);
+
 void shiftLeft(int arr[], const unsigned int n, int Quantity);
 void shiftLeft(double arr[], const unsigned int n, int Quantity);
+
 void shiftRight(int arr[], const unsigned int n, int Quantity);
 void shiftRight(double arr[], const unsigned int n, int Quantity);
 
